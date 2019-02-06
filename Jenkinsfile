@@ -25,7 +25,7 @@ pipeline {
             steps {
                 //sh 'cd /ucpbundle ; eval "$(<env.sh)" ; docker service create myapp:build-${BUILD_ID}'
                 //sh 'docker service create --replicas 4 nginx'
-                sh 'docker login -u jenkins -p ${DTR_ACCESS_KEY} ${DTR_FQDN} ; docker image push ${DTR_FQDN}/jenkins/myapp:build-${BUILD_ID}
+                sh 'docker login -u jenkins -p ${DTR_ACCESS_KEY} ${DTR_FQDN} ; docker image push ${DTR_FQDN}/jenkins/myapp:build-${BUILD_ID}'
             }
         }
     }
