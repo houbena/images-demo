@@ -4,7 +4,10 @@ pipeline {
 
     stages {
         stage('Build') {
-            agent {dockerfile true}
+            agent {dockerfile true} 
+            environment {
+                HOME = '/tmp'
+            } 
             steps {
                 sh 'dotnet dotnetapp.dll'
             }
