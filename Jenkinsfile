@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {
             agent {dockerfile true}
             steps {
-                bash 'cd /app/dotnetapp/out/ ; dotnet dotnetapp.dll'
+                sh '/usr/bin/dotnet dotnetapp.dll'
             }
         }
         stage('Test') {
