@@ -16,7 +16,8 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'docker container run myapp:build-${BUILD_ID}'
+                sh 'cd /home/centos/ucp-credentials ; eval "$(<env.sh)"'
+                sh 'docker service create --replicas 4 nginx'
             }
         }
     }
