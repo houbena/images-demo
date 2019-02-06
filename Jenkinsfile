@@ -1,19 +1,22 @@
 pipeline {
 
-    agent {dockerfile true}
+    agent none
 
     stages {
         stage('Build') {
+            agent { dockerfile true }
             steps {
-                docker image ls
+                dotnet dotnetapp.dll
             }
         }
         stage('Test') {
+            agent { dockerfile true }
             steps {
-                echo 'Testing..'
+                echo 'Testing...'
             }
         }
         stage('Deploy') {
+            agent { dockerfile true }
             steps {
                 echo 'Deploying....'
             }
