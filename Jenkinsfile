@@ -22,8 +22,8 @@ pipeline {
                 DOCKER_HOST='tcp://ec2-54-174-122-88.compute-1.amazonaws.com:443'
             }
             steps {
-                //sh 'cd /ucpbundle ; eval "$(<env.sh)" ; docker service create myapp:build-${BUILD_ID}'
-                sh 'docker service create --replicas 4 nginx'
+                sh 'cd /ucpbundle ; eval "$(<env.sh)" ; docker service create myapp:build-${BUILD_ID}'
+                //sh 'docker service create --replicas 4 nginx'
             }
         }
     }
