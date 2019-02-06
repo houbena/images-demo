@@ -8,3 +8,4 @@ RUN dotnet publish -c Release -o out
 
 WORKDIR /app/dotnetapp/out
 ENTRYPOINT ["dotnet", "dotnetapp.dll"]
+USER jenkins
