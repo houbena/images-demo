@@ -16,8 +16,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'cd /ucpbundle ; eval "$(<env.sh)"'
-                sh 'docker service create --replicas 4 nginx'
+                sh 'cd /ucpbundle ; eval "$(<env.sh)" ; docker service create --replicas 4 nginx'
                 //sh 'ls /ucpbundle'
             }
         }
