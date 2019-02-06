@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {
             agent { dockerfile true }
             steps {
-                sh 'pwd'
+                pwd
             }
         }
         stage('Test') {
