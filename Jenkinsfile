@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'docker container run myapp:test-${BUILD_ID}'
+                sh 'docker container run myapp:testbuild-${BUILD_ID}'
             }
         }
         stage('Deploy') {
