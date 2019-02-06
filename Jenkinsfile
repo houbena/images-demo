@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {
             agent { dockerfile true }
             steps {
-                dotnet dotnetapp.dll
+                sh dotnet dotnetapp.dll
             }
         }
         stage('Test') {
