@@ -5,17 +5,18 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker image ls'
+                sh 'docker image build -t myapp:1.0 .'
+                sh 'docker image build --target testrunner -t myapp:test .'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing...'
+                sh 'docker container run myapp:test'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                sh 'docker container run myapp:1.0'
             }
         }
     }
