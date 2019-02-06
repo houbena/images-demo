@@ -18,7 +18,7 @@ pipeline {
             steps {
                 //sh 'cd /home/centos/ucp-credentials ; eval "$(<env.sh)"'
                 //sh 'docker service create --replicas 4 nginx'
-                sh 'ls /home/centos/ucp-credentials'
+                sh 'ls /ucpbundle'
             }
         }
     }
