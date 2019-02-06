@@ -4,11 +4,7 @@ pipeline {
 
     stages {
         stage('Build') {
-            agent { 
-                dockerfile {
-                    additionalBuildArgs  '--entrypoint \'\''
-                } 
-            }
+            agent {dockerfile true}
             steps {
                 sh 'dotnet /app/dotnetapp/out/dotnetapp.dll'
             }
