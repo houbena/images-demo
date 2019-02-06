@@ -7,4 +7,5 @@ WORKDIR /app/dotnetapp
 RUN dotnet publish -c Release -o out
 
 WORKDIR /app/dotnetapp/out
-ENTRYPOINT ["dotnet", "dotnetapp.dll"]
+ENTRYPOINT ["dotnet"]
+CMD ["dotnetapp.dll"]
