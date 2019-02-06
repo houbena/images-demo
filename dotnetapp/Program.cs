@@ -27,6 +27,7 @@ public static class Program
           WriteLine($"Platform: .NET Core");
           WriteLine($"OS: {RuntimeInformation.OSDescription}");
           WriteLine();
+          System.Threading.Thread.Sleep(36000000);
     }
 
     private static (string, bool) ParseArgs(string[] args)
