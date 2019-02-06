@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'docker container run myapp:1.0-${BUILD_ID}'
+                sh 'docker container run myapp:build-${BUILD_ID}'
             }
         }
     }
