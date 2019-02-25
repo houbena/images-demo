@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'docker container run myapp:testbuild-0-${BUILD_ID}'
+                sh 'docker container run myapp:testbuild-${BUILD_ID}'
             }
         }
     }
