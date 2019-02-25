@@ -9,7 +9,7 @@ public static class Program
 {
     public static void Main(string[] args) 
     {
-          var defaultMessage = "Hello from Berlin!";
+          var defaultMessage = "Hello from Docker!";
           var bot = GetBot();
           var (message, withColor) = ParseArgs(args);
           var output = message == string.Empty ? $"    {defaultMessage}{bot}" : $"    {message}{bot}";
